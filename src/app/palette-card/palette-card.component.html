@@ -1,0 +1,77 @@
+
+<div class="main">
+<div class="container">
+  <div class="card">
+    <div class="display-msg animated" [ngClass]="{'fadeIn': showMessage == true,'fadeOut': showMessage == false}">
+      {{message}}
+    </div>
+    <div class="colors" *ngIf="initialized">
+<h2 class="text-center">Color Palette Generator</h2>
+
+      <div class="color" id="color1" [ngStyle]="{'background-color':colorData.a.rgbString}">
+        <p class="action-icons" [ngStyle]="{'color':colorData.a.textColor}">
+          <i (click)="copyTextToClipboard(colorData.a.hex)" class="fas fa-copy clipboard"></i>
+          <!-- <i (click)="toggleLock('a')" *ngIf="!colorData.a.lock" class="fas fa-unlock-alt"></i>
+          <i (click)="toggleLock('a')" *ngIf="colorData.a.lock" class="fas fa-lock"></i> -->
+        </p>
+        <p class="color-hex" [ngStyle]="{'color':colorData.a.textColor}">
+          #<span contenteditable class="hex" (keypress)="editColor('a', $event)" (click)="clickHex()">{{colorData.a.hex}}</span>
+        </p>
+      </div>
+
+      <div class="color" id="color2" [ngStyle]="{'background-color':colorData.b.rgbString}">
+         <!-- <input type="color"  class="color" id="color2" value="this.colorData[color].hex"  (click)="show()"> -->
+        <p class="action-icons" [ngStyle]="{'color':colorData.b.textColor}">
+          <i (click)="copyTextToClipboard(colorData.b.hex)" class="fas fa-copy clipboard"></i>
+          <!-- <i (click)="toggleLock('b')" *ngIf="!colorData.b.lock" class="fas fa-unlock-alt"></i>
+          <i (click)="toggleLock('b')" *ngIf="colorData.b.lock" class="fas fa-lock"></i> -->
+        </p>
+        <p class="color-hex"  [ngStyle]="{'color':colorData.b.textColor}">
+          #<span contenteditable class="hex" (keypress)="editColor('b', $event)" (click)="clickHex()" >{{colorData.b.hex}}</span>
+        </p>
+       
+      </div>
+
+      <div class="color" id="color3" [ngStyle]="{'background-color':colorData.c.rgbString}">
+        <p class="action-icons" [ngStyle]="{'color':colorData.c.textColor}">
+          <i (click)="copyTextToClipboard(colorData.c.hex)" class="fas fa-copy clipboard"></i>
+          <!-- <i (click)="toggleLock('c')" *ngIf="!colorData.c.lock" class="fas fa-unlock-alt"></i>
+          <i (click)="toggleLock('c')" *ngIf="colorData.c.lock" class="fas fa-lock"></i> -->
+        </p>
+        <p class="color-hex" [ngStyle]="{'color':colorData.c.textColor}">
+          #<span contenteditable class="hex" (keypress)="editColor('c', $event)" (click)="clickHex()">{{colorData.c.hex}}</span>
+        </p>
+      </div>
+
+      <div class="color" id="color4" [ngStyle]="{'background-color':colorData.d.rgbString}">
+        <p class="action-icons" [ngStyle]="{'color':colorData.d.textColor}">
+          <i (click)="copyTextToClipboard(colorData.d.hex)" class="fas fa-copy clipboard"></i>
+          <!-- <i (click)="toggleLock('d')" *ngIf="!colorData.d.lock" class="fas fa-unlock-alt"></i>
+          <i (click)="toggleLock('d')" *ngIf="colorData.d.lock" class="fas fa-lock"></i> -->
+        </p>
+        <p class="color-hex" [ngStyle]="{'color':colorData.d.textColor}">
+          #<span contenteditable class="hex" (keypress)="editColor('d', $event)" (click)="clickHex()">{{colorData.d.hex}}</span>
+        </p>
+      </div>
+
+      <div class="color" id="color5" [ngStyle]="{'background-color':colorData.e.rgbString}">
+        <p class="action-icons" [ngStyle]="{'color':colorData.e.textColor}">
+          <i (click)="copyTextToClipboard(colorData.e.hex)" class="fas fa-copy clipboard"></i>
+          <!-- <i (click)="toggleLock('e')" *ngIf="!colorData.e.lock" class="fas fa-unlock-alt"></i>
+          <i (click)="toggleLock('e')" *ngIf="colorData.e.lock" class="fas fa-lock"></i> -->
+        </p>
+        <p class="color-hex" [ngStyle]="{'color':colorData.e.textColor}">
+          #<span contenteditable class="hex" (keypress)="editColor('e', $event)" (click)="clickHex()">{{colorData.e.hex}}</span>
+        </p>
+      </div>
+
+      <div class="
+            icon-container">
+        <i class="fas fa-redo-alt icon" (click)="generateColor()" [ngClass]="{'fa-spin': generating == true}"></i>
+        <button class="btn btn-danger"(click)="generateColor()">Generate</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>

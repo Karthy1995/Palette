@@ -1,0 +1,14 @@
+
+.header_class .bg-light {
+    background-color: rgb(13, 14, 13) !important;
+    
+}
+.navbar-light .navbar-nav .nav-link {
+    color:white;
+  padding-left:16px;
+}
+.container-fluid{
+    margin-left:450px;
+}
+
+
