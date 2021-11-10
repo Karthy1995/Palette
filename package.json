@@ -10,7 +10,9 @@
     "dev:ssr": "ng run pal:serve-ssr",
     "serve:ssr": "node dist/pal/server/main.js",
     "build:ssr": "ng build && ng run pal:server",
-    "prerender": "ng run pal:prerender"
+    "prerender": "ng run pal:prerender",
+    "start:heroku":"node dist/server",
+"postinstall":"npm run build:ssr" 
   },
   "private": true,
   "dependencies": {
